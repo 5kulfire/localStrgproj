@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    background-color: lightgrey;
+}
+#main{
+    border: 2px solid black;
+    margin: 30px;
+    background-color: rgba(2550,65,23,0.3);
+}
+img{
+    padding: 2px;
+    border:2px double blue;
+    height: 180px;
+}
+#data{
+    padding: 20px;
+    background-color: bisque;
+}
+#info{
+    padding: 10px;
+    border: 3px dashed firebrick ;
+}

@@ -1,0 +1,58 @@
+<!--Rishabh Singh-->
+<!--Student ID: 991555817-->
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <link rel="stylesheet" href="../CSS/style.css">
+        <script src="../Javascript/script.js"></script>
+        <title>
+            Rishabh Singh
+        </title>
+    </head>
+    <body>
+        <div id="main">
+            <header>
+                Assignment#1/ Rishabh Singh/ 991555817
+            </header><hr><hr><br><br>
+            <img src="../Images/1575500923804.jpg"/>
+            <p id="pic">Sales representative</p>
+            <div id="info">
+                <h1><span id="comp"></span></h1>
+                <h2><span id="ownr"></span> </h2>
+                <h2><span id="mail"></span></h2>
+            </div>
+            <h3><span id="borrowamnt"></span></h3>
+            <h3><span id="nterms"></span></h3>
+            <h3><span id="interest"></span></h3>
+            <h3><span id="paym"></span></h3>
+            <h3><span id="proft"></span></h3>
+            <script>
+                document.getElementById("comp").innerHTML= "Company: " + localStorage.getItem("Company");
+                document.getElementById("ownr").innerHTML= "Owner: " + localStorage.getItem("Owner");
+                document.getElementById("mail").innerHTML= "Email: " + localStorage.getItem("Email");
+                document.getElementById("borrowamnt").innerHTML= "Borrowed amount: $" + localStorage.getItem("BorrowAmt");
+                document.getElementById("nterms").innerHTML= "Terms: " + localStorage.getItem("PaymentTerms") + " years";
+                var borrowstr= localStorage.getItem("BorrowAmt");
+                var termsstr= localStorage.getItem("PaymentTerms");
+                var borrow= parseFloat(borrowstr);
+                var terms= parseFloat(termsstr);
+                var interest= borrow*terms/12*3/100;
+                var payment= borrow+interest;
+                var profit= payment- borrow;
+                document.getElementById("interest").innerHTML= "Interest= $" + interest;
+                document.getElementById("paym").innerHTML= "Payment= $" + payment;
+                document.getElementById("proft").innerHTML= "Profit= $" + profit;
+            </script>
+            <select id="selectapprov">
+                <option value="" selected>Choose..</option>
+                <option value="Approved">Approve</option>
+                <option value="Rejected">Reject</option>
+                <option value="Need more info">Need more info</option>
+            </select>
+            <button id="decision">Proceed</button>
+            <hr><footer>sinrisha/ Davis campus</footer>
+        </div>
+    </body>
+</html>
